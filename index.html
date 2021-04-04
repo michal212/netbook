@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="tech_logo.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="">
+                TechCareer</a>
+            <div class="btns">
+                <button id="tableBtn" class="btn btn-warning" onclick="tableProfiles()">Table</button>
+                <button id="addBtn" type="button" class="btn btn-info" data-bs-toggle="modal"
+                    data-bs-target="#userDialog">
+                    add user
+                </button>
+
+            </div>
+            <div class="heading">
+                <h1>NetBook</h1>
+                <h3> Social Network To Study Together </h3>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- כרטיסיית תמונות -->
+
+
+    <div id="mainDiv"></div>
+
+    <div class="wrapper">
+        <div class="container" id="container">
+            <div class="row" id="row">
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- טבלה  -->
+
+    <table class="table table-success" id="table">
+        <th>
+            <tr class="table-active">
+                <td>url</td>
+                <td>first name</td>
+                <td>last name</td>
+                <td>age</td>
+                <td>email</td>
+                <td>phone number</td>
+            </tr>
+        </th>
+    </table>
+    <!-- <table class="table table-success" id="table">
+    
+    </table> -->
+    <!-- טופס -->
+    <div class="modal fade" id="userDialog" tabindex="-1" aria-labelledby="userDialogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userDialogLabel">Add user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="form">
+
+                    <div class="modal-body">
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">First Name</span>
+                            <input id="firstNameInput" type="text" class="form-control" placeholder="First Name"
+                                aria-label="FirstName" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Last Name</span>
+                            <input id="lastNameInput" type="text" class="form-control" placeholder="Last Name"
+                                aria-label="lastName" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Age</span>
+                            <input id="ageInput" type="text" class="form-control" placeholder="Age"
+                                aria-label="lastName" aria-describedby="basic-addon1">
+                        </div>
+
+                        <label for="basic-url" class="form-label"> URL Img</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            <input id="imgInput" type="text" class="form-control" id="basic-url"
+                                aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Phone Number</span>
+                            <input id="phoneNumberInput" type="text" class="form-control" placeholder="05"
+                                aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                        <div class="d-grid gap-2">
+
+                            <button onclick="addUser()" class="btn btn-secondary">sign in</button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer" id="footer">
+        <div class="row">
+            <div class="col-sm">
+                <h3>ABOUT US</h3>
+                <P> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tempora. Lorem ipsum
+                    dolor sit
+                    amet consectetur adipisicing elit. Quod quia deleniti animi nesciunt. Veritatis quis ex
+                    dolore sed
+                    commodi culpa vero eos labore dolor laborum sint, ut modi quos pariatur.</P>
+            </div>
+            <div class="col-sm">
+                <h3>TERMS OF USE</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tempora. Lorem ipsum
+                    dolor sit
+                    amet consectetur adipisicing elit. Molestias nam ea vitae officia nostrum esse sunt quod
+                    dolores
+                    iusto aliquam aliquid tempore sit repudiandae, praesentium quasi. Odio eum id hic.</P>
+
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <h3>CONTACT</h3>
+
+                    <a href=""><img class="logo" src="face icon.png" alt=""> facebook</a>
+                    <a href=""><img class="logo" src="githubicon.png" alt="">github</a>
+                    <a href=""><img class="logo" src="linkdin icon.png" alt="">linkdin</a>
+                </ul>
+            </div>
+        </div>
+        <!-- </div> -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+
+        <script src="main.js"></script>
+
+</body>
+
+</html>
